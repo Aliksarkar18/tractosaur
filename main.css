@@ -68,3 +68,13 @@
     animation-duration: 2s;
     animation-iteration-count: 1;
 }
+
+#ladybug {
+    height: 70px;
+    width: 110px;
+    background-image: url("images/ladybug.png");
+    background-size: 110px 70px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
