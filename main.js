@@ -4,9 +4,11 @@ window.onload = function () {
 
 function jump() {
     const tractorElement = document.getElementById("tractor");
-    tractorElement.classList.add("jump");
+    if (!tractorElement.classList.contains("jump")) {
+        tractorElement.classList.add("jump");
 
-    setTimeout(function removeJumpClass() {
-        tractorElement.classList.remove("jump");
-    }, 2000);
+        setTimeout(function removeJumpClass() {
+            tractorElement.classList.remove("jump");
+        }, 2000);
+    }
 }
