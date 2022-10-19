@@ -12,33 +12,27 @@
     position: absolute;
     bottom: 0;
     left: 10px;
-
 }
 
 #rearWheel {
     height: 55px;
     width: 55px;
-    background-image: url("images/wheel.png");
     background-size: 55px 55px;
-    position: absolute;
     bottom: 0;
     left: -5px;
-
-    animation-name: spin;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
 }
 
 #frontWheel {
     height: 47px;
     width: 47px;
-    background-image: url("images/wheel.png");
     background-size: 47px 47px;
-    position: absolute;
     bottom: 0;
     right: 1px;
+}
 
+.wheel {
+    background-image: url("images/wheel.png");
+    position: absolute;
     animation-name: spin;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -54,7 +48,6 @@
         transform: rotate(360deg);
     }
 }
-
 
 @keyframes jump {
     0% {
