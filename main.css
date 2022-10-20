@@ -2,12 +2,14 @@
     height: 300px;
     border: 1px solid black;
     position: relative;
+    overflow: hidden;
 }
 
 #tractor {
+    background-color: blanchedalmond;
     height: 100px;
     width: 125px;
-    background-image: url("images/tractor.png");
+    background-image: url('images/tractor.png');
     background-size: 125px 100px;
     position: absolute;
     bottom: 0;
@@ -31,7 +33,7 @@
 }
 
 .wheel {
-    background-image: url("images/wheel.png");
+    background-image: url('images/wheel.png');
     position: absolute;
     animation-name: spin;
     animation-duration: 2s;
@@ -72,9 +74,25 @@
 #ladybug {
     height: 70px;
     width: 110px;
-    background-image: url("images/ladybug.png");
+    background-color: beige;
+    background-image: url('images/ladybug.png');
     background-size: 110px 70px;
     position: absolute;
     bottom: 0;
-    right: 10px;
+    right: -110px;
+
+    animation-name: ladybug;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes ladybug {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100vw - 110px));
+    }
 }
