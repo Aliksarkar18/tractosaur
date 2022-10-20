@@ -6,7 +6,6 @@
 }
 
 #tractor {
-    background-color: blanchedalmond;
     height: 100px;
     width: 125px;
     background-image: url('images/tractor.png');
@@ -72,17 +71,16 @@
 }
 
 #ladybug {
-    height: 70px;
-    width: 110px;
-    background-color: beige;
+    height: 50px;
+    width: 80px;
     background-image: url('images/ladybug.png');
-    background-size: 110px 70px;
+    background-size: 80px 50px;
     position: absolute;
     bottom: 0;
     right: -110px;
 
     animation-name: ladybug;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
