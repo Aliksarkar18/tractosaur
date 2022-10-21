@@ -27,6 +27,7 @@ function update() {
     if (elementsOverLap(tractorElement, ladybugElement)) {
         ladybugElement.style.display = 'none'
 
+        // "uhoh, the tractor hit the ladybug. Do you want to try again?" in Polish
         if (confirm('Ojoj, traktorek uderzył w biedronkę.\nZacząć jeszcze raz?')) {
             refreshPage()
         }
