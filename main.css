@@ -87,7 +87,7 @@ h1 {
     background-size: calc(80 / 125 * var(--tractor-width)) calc(50 / 125 * var(--tractor-width));
     position: absolute;
     bottom: 0;
-    right: 110px;
+    right: calc(-80 / 125 * var(--tractor-width));
 
     animation-name: ladybug;
     animation-duration: 2.5s;
@@ -101,7 +101,7 @@ h1 {
     }
 
     to {
-        transform: translateX(calc(-100vw - 110px));
+        transform: translateX(calc(-100vw - calc(80 / 125 * var(--tractor-width))));
     }
 }
 
