@@ -1,39 +1,44 @@
-h1{
+:root {
+    --tractor-width: 10vw;
+}
+
+h1 {
     text-align: center;
     text-decoration: underline;
 }
 
 #board {
-    height: 300px;
+    min-height: 300px;
+    height: calc(300 / 125 * var(--tractor-width));
     border: 1px solid black;
     position: relative;
     overflow: hidden;
 }
 
 #tractor {
-    height: 100px;
-    width: 125px;
+    height: calc(100 / 125 * var(--tractor-width));
+    width: var(--tractor-width);
     background-image: url('images/tractor.png');
-    background-size: 125px 100px;
+    background-size: var(--tractor-width) calc(100 / 125 * var(--tractor-width));
     position: absolute;
     bottom: 0;
     left: 10px;
 }
 
 #rearWheel {
-    height: 55px;
-    width: 55px;
-    background-size: 55px 55px;
+    height: calc(55 / 125 * var(--tractor-width));
+    width: calc(55 / 125 * var(--tractor-width));
+    background-size: calc(55 / 125 * var(--tractor-width)) calc(55 / 125 * var(--tractor-width));
     bottom: 0;
-    left: -5px;
+    left: calc(-5 / 125 * var(--tractor-width));
 }
 
 #frontWheel {
-    height: 47px;
-    width: 47px;
-    background-size: 47px 47px;
+    height: calc(47 / 125 * var(--tractor-width));
+    width: calc(47 / 125 * var(--tractor-width));
+    background-size: calc(47 / 125 * var(--tractor-width)) calc(47 / 125 * var(--tractor-width));
     bottom: 0;
-    right: 1px;
+    right: calc(1 / 125 * var(--tractor-width));
 }
 
 .wheel {
@@ -61,7 +66,7 @@ h1{
     }
 
     50% {
-        transform: translateY(-150px) rotate(360deg);
+        transform: translateY(calc(-150 / 125 * var(--tractor-width))) rotate(360deg);
     }
 
     100% {
@@ -71,18 +76,18 @@ h1{
 
 .jump {
     animation-name: jump;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
 }
 
 #ladybug {
-    height: 50px;
-    width: 80px;
+    height: calc(50 / 125 * var(--tractor-width));
+    width: calc(80 / 125 * var(--tractor-width));
     background-image: url('images/ladybug.png');
-    background-size: 80px 50px;
+    background-size: calc(80 / 125 * var(--tractor-width)) calc(50 / 125 * var(--tractor-width));
     position: absolute;
     bottom: 0;
-    right: -110px;
+    right: 110px;
 
     animation-name: ladybug;
     animation-duration: 2.5s;
