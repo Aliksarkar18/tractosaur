@@ -1,3 +1,8 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
 #board {
     height: 300px;
     border: 1px solid black;
@@ -66,7 +71,7 @@
 
 .jump {
     animation-name: jump;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
 }
 
@@ -93,4 +98,21 @@
     to {
         transform: translateX(calc(-100vw - 110px));
     }
+}
+
+.restart {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.restartBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: rgb(24, 22, 22);
+    color: white;
+    cursor: pointer;
 }
