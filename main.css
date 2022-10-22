@@ -4,14 +4,14 @@
 
 h1 {
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #board {
     min-height: 300px;
     height: calc(300 / 125 * var(--tractor-width));
     border: 1px solid black;
-    position: relative;
+    position: absolute;
     overflow: hidden;
 }
 
@@ -20,7 +20,7 @@ h1 {
     width: var(--tractor-width);
     background-image: url('images/tractor.png');
     background-size: var(--tractor-width) calc(100 / 125 * var(--tractor-width));
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 10px;
 }
@@ -43,9 +43,9 @@ h1 {
 
 .wheel {
     background-image: url('images/wheel.png');
-    position: absolute;
+    position: relative;
     animation-name: spin;
-    animation-duration: 2s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -76,7 +76,7 @@ h1 {
 
 .jump {
     animation-name: jump;
-    animation-duration: 2s;
+    animation-duration: 7s;
     animation-iteration-count: 1;
 }
 
