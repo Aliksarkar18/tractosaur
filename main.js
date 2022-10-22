@@ -1,6 +1,5 @@
 const tractorElement = document.getElementById('tractor')
 const ladybugElement = document.getElementById('ladybug')
-const restartButton = document.querySelector('.restartBtn')
 
 function elementsOverLap(element1, element2) {
     const rect1 = element1.getBoundingClientRect()
@@ -27,13 +26,15 @@ function jump() {
 function update() {
     if (elementsOverLap(tractorElement, ladybugElement)) {
         ladybugElement.style.display = 'none'
-        alert('OOPS! You crashed')
+
+        // "uhoh, the tractor hit the ladybug. Do you want to try again?" in Polish
+        if (confirm('Ojoj, traktorek uderzył w biedronkę.\nZacząć jeszcze raz?')) {
+            refreshPage()
+        }
     }
 
     window.requestAnimationFrame(update)
 }
-
-restartButton.addEventListener('click', refreshPage)
 
 function refreshPage() {
     location.reload()
